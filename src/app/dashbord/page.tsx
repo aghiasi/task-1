@@ -6,6 +6,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { User } from "@/types/userDataType";
 export default function UserInfo() {
   const dispatch = useDispatch<Appdispatch>();
+  // این بخش برای هارد رفرش کردن صفحه است 
   useEffect(() => {
     dispatch(hardRefresh());
     if (document) {

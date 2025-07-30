@@ -1,4 +1,5 @@
 "use client";
+//کامپوننت فرم برای این که تمام بخش صفحه کلاینت ساید نباشد جدا شده 
 import { submitPhone } from "@/libs/fetchRequest";
 import { Appdispatch } from "@/store/store";
 import { FormEvent } from "react";

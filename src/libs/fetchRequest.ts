@@ -2,6 +2,7 @@ import { fetchUserData } from "@/store/userData/fetchUserData";
 import { logout } from "@/store/userData/reducer";
 import { redirect } from "next/navigation";
 import { FormEvent } from "react";
+//این فانگشن ولیدیشن شماره
 export const loginFetch = (input: string) => {
   const phoneNumber: string = `0${input}`;
   if (phoneNumber === "0") {
@@ -11,6 +12,7 @@ export const loginFetch = (input: string) => {
     throw new Error("شماره وارد شده صحیح نمی باشد");
   }
 };
+// این فانکشن الرت های ما را هندل میکند
 export const submitPhone = async (e: FormEvent, dispatch: Function) => {
   e.preventDefault();
   const username: HTMLInputElement | null = document.querySelector("#username");
@@ -28,6 +30,7 @@ export const submitPhone = async (e: FormEvent, dispatch: Function) => {
     }
   }
 };
+//این فانکشن برای خروج کاربر میباشد
 export const logoutHandler = async (e:any, dispatch: Function) => {
   e.preventDefault();
   try {

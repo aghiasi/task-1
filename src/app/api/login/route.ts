@@ -1,4 +1,5 @@
 import * as jose from "jose";
+//این بخش برای دریافت اطلاعات و تولید توکن و استور کردن ان است
 import { cookies } from "next/headers";
 export const POST = async () => {
   const databasePassword: string | undefined = process.env.PASSWORD;
