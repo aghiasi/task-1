@@ -1,26 +1,53 @@
 @import "tailwindcss";
-
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@font-face {
+  font-family: iranyekanNumbers;
+  src: url("../../public/assets/fonts/IRANYekanMediumFaNum.ttf");
+}
+.login_section {
+  @apply bg-gray-50 sm:h-screen dark:bg-gray-900;
+}
+.login_form_layout {
+  @apply flex flex-col items-center justify-center px-6 py-8 mx-auto md:h-screen lg:py-0 h-screen;
+}
+.login_form_wraper {
+  @apply w-full bg-white rounded-lg shadow dark:border md:mt-0 sm:max-w-md xl:p-0 dark:bg-gray-800 dark:border-gray-700;
+}
+.login_form_header {
+  @apply text-xl font-bold leading-tight tracking-tight text-gray-900 md:text-2xl dark:text-white text-right;
+}
+.login_form {
+  @apply space-y-4 md:space-y-6;
+}
+.login_form_username {
+  @apply bg-gray-50 border border-gray-300 text-gray-900 rounded-lg block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500;
+}
+.login_form_lable {
+  @apply block mb-2 text-sm font-medium text-gray-900 dark:text-white text-right;
+}
+.login_form_btn {
+  @apply w-full text-white bg-cyan-600 hover:bg-cyan-900 focus:ring-4 focus:outline-none focus:ring-cyan-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-cyan-600 dark:hover:bg-cyan-700 dark:focus:ring-cyan-800;
+}
+.btn {
+  @apply bg-gray-50 flex justify-center items-center flex-row p-5 text-center rounded-2xl h-10 my-1 mx-2 text-gray-500 cursor-pointer hover:bg-gray-100 hover:scale-[110%] hover:shadow-md shadow-gray-100 active:scale-100;
+}
+.iran_numbers {
+  font-family: iranyekanNumbers !important;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+.rmdp-container {
+  width: 100%;
 }
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
-
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+.sidespan{
+  display: none;
+}
+#sidebar:hover .sidespan {
+  display: block;
 }
